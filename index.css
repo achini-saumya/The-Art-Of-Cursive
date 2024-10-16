@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #296e93;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #5c4d7d;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-container {
+    flex: 1 1 300px; /* Allow flex item to grow and shrink, with a base width of 300px */
+    max-width: 300px; /* Maximum width for larger screens */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.image-container img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.text-container {
+    flex: 2 1 300px; /* Allow flex item to grow and shrink, with a base width of 300px */
+    max-width: 600px; /* Maximum width for text */
+    text-align: left; /* Align text to the left */
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px; /* Adjusted padding to reduce button height */
+    background-color: #ff6347; /* Tomato color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.download-button:hover {
+    background-color: #ff4500; /* Darker Tomato color */
+}
+
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .content {
+        flex-direction: column; /* Stack the image and text on small devices */
+        align-items: center; /* Center items */
+    }
+
+    .image-container {
+        margin-right: 0; /* Remove margin on small devices */
+        margin-bottom: 20px; /* Add margin at the bottom for spacing */
+    }
+
+    .text-container {
+        margin: 0 20px; /* Add equal left and right margins */
+        text-align: center; /* Center align text for better appearance on small devices */
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust title size for small devices */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjust subtitle size for small devices */
+    }
+
+    .download-button {
+        width: auto; /* Allow the button to resize based on content */
+        padding: 10px 20px; /* Ensure the button height is consistent */
+    }
+}
